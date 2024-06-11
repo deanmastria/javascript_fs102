@@ -25,7 +25,6 @@ shoppingCart.sort(function(a,b){return a-b}).reverse();
 }
 
 
-
 for (let i = 0; i < shoppingList.length; i++) {
 	console.log('Shopping List ' + `${i + 1}: ${shoppingList[i]}`); 
     }
@@ -34,3 +33,5 @@ for (let i = 0; i < shoppingList.length; i++) {
 for (let i = 0; i < shoppingCart.length; i++) {
 	console.log('Food ' + `${i + 1}: ${shoppingCart[i]}`); 
 }
+
+console.log(shoppingCart.join(', '))
