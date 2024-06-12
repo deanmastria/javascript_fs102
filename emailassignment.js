@@ -80,6 +80,13 @@ let emailData = {               //object
 };
 
 console.log(emailData)
+
+for (let i = 0; i < mailboxes.length; i++) {
+    console.log('Mailboxes' + ` ${mailboxes[i]} `);
+    }
+
+
+
 // {name: 'Mike', lastMessage: "Good seeing you today!"},
 // {name: 'Jeff', lastMessage: "Beach later, be there!"},
 // {name: 'Lenny', lastMessage: "We've been trying to reach you about your cars warranty!"},
