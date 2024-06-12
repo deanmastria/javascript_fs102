@@ -98,8 +98,12 @@ for (let mailboxnames in emailData.mailboxes) {
         console.log(emailData.emails[emaillist]);
         }
 
-        console.log(emailData.mailboxes.inbox[1])
+        console.log(emailData.mailboxes.inbox[1]);
 
+        while (emailData.mailboxes.drafts.length > 0) {
+        emailData.mailboxes.sent.push(emailData.mailboxes.drafts.pop());
+        }
+        console.log('sent', emailData.mailboxes.sent)
 
 
 // {name: 'Mike', lastMessage: "Good seeing you today!"},
