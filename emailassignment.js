@@ -79,10 +79,11 @@ let emailData = {               //object
 }
 };
 
-console.log(emailData)
+console.log(emailData);
 
-for (let i = 0; i < mailboxes.length; i++) {
-    console.log('Mailboxes' + ` ${mailboxes[i]} `);
+for (let mailboxnames in emailData.mailboxes) {
+    console.log(`Mailboxnames: ${mailboxnames}`);
+    console.log(emailData.mailboxes[mailboxnames]);
     }
 
 
