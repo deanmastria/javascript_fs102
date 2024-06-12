@@ -33,6 +33,13 @@ let emailData = {               //object
                  Body: "We've been trying to reach you about your cars warranty!"
                 },
             ],
+            drafts: [
+                {Sender: { name: 'Deano', email: 'deano@gmail.com'},
+                 Recipient: { name: 'Lenny', email: 'Lenny@toyota.com'},
+                 Subject: "RE:I've got to tell you something!",
+                 Body: "I don't have a car"
+                },
+            ],
             sent: [
                 {Sender: { name: 'Deano', email: 'deano@gmail.com'},
                  Recipient: {name: 'Mike', email: 'Mike@gmail.com'},
