@@ -7,51 +7,48 @@ let emailData = {               //object
                  Subject: "Catching Up",
                  Body: "Good seeing you today!"
                 },
-            ]
-            [
-                {Sender: ( name: 'Jeff', email: 'Jeff@gucci.com' ),
+            
+                {Sender: { name: 'Jeff', email: 'Jeff@gucci.com' },
                  Recipient: { name: 'Deano', email: 'deano@gmail.com'},
                  Subject: "RE:Working for the weekend",
                  Body: "Beach later, be there!"
                 },
-            ]
-            [
-                {Sender: ( name: 'Jon', email: 'Jon@apple.com' ),
+            
+                {Sender: { name: 'Jon', email: 'Jon@apple.com' },
                  Recipient: { name: 'Deano', email: 'deano@gmail.com'},
                  Subject: "Sorry for the dealy",
                  Body: "Send the docs over."
                 },
-            ]
-            [
-                {Sender: ( name: 'Chris', email: 'Chris@gmail.com' ),
+            
+                {Sender: { name: 'Chris', email: 'Chris@gmail.com' },
                  Recipient: { name: 'Deano', email: 'deano@gmail.com'},
                  Subject: "Big news",
                  Body: "I'm moving!"
                 },
-            ]             // value/array
+            ],             // value/array
             junk: [
                 {Sender: { name: 'Lenny', email: 'Lenny@toyota.com'},
                  Recipient: { name: 'Deano', email: 'deano@gmail.com'},
                  Subject: "I've got to tell you something!",
                  Body: "We've been trying to reach you about your cars warranty!"
                 },
-            ]
+            ],
             sent: [
                 {Sender: { name: 'Deano', email: 'deano@gmail.com'},
-                 Recipient: {name: 'Mike', email, 'Mike@gmail.com'},
+                 Recipient: {name: 'Mike', email: 'Mike@gmail.com'},
                  Subject: "Catching Up",
                  Body: "you too, Mike!"
                 },
-            ]
+            ],
             spam: [
                 {Sender: { name: 'Spamiam', email: 'spamcity@whoknoes.com'},
                  Recipient: { name: 'Deano', email: 'deano@gmail.com'},
-                 Subject: "You've Won!!!"
+                 Subject: "You've Won!!!",
                  Body: "Claim this prize!"
                 },
-            ]
+            ],
             archived: [
-                {Sender: { name: 'Mike', email, 'Mike@gmail.com' },
+                {Sender: { name: 'Mike', email: 'Mike@gmail.com' },
                 Recipient: { name: 'Deano', email: 'deano@gmail.com'},
                 Subject: "Sorry for the dealy",
                 Body: "Send the docs over."
@@ -70,9 +67,9 @@ let emailData = {               //object
             'Mike@gmail.com'
         ],
         labels: [
-            'work'
-            'friend'
-            'family'
+            'work',
+            'friend',
+            'family',
             'NA'
         ],
 
