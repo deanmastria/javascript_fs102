@@ -98,6 +98,8 @@ for (let mailboxnames in emailData.mailboxes) {
         console.log(emailData.emails[emaillist]);
         }
 
+        console.log(emailData.mailboxes.inbox[1])
+
 
 
 // {name: 'Mike', lastMessage: "Good seeing you today!"},
