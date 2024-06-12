@@ -84,7 +84,12 @@ console.log(emailData);
 for (let mailboxnames in emailData.mailboxes) {
     console.log(`Mailboxnames: ${mailboxnames}`);
     console.log(emailData.mailboxes[mailboxnames]);
-    }
+    };
+
+    for (let emaillist in emailData.emails) {
+        console.log(`Emaillist: ${emaillist}`);
+        console.log(emailData.emails[emaillist]);
+        }
 
 
 
