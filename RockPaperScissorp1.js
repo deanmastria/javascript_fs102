@@ -1,5 +1,5 @@
 const hands = ['rock', 'paper', 'scissors'];                            //an array that creates rock papaer scissors as the constant variables
-
+let winner = null;
 
 function getHand(){
     return hands[parseInt(Math.random()*10)%3]                          //returns hands from the array
