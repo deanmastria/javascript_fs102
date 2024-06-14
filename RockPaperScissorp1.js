@@ -14,14 +14,22 @@ let players = {                                                         //variab
         name: 'jack',                                                   //property 1
         getHand: getHand                                                //property 2
     },
+    kyle: {                                                            //object 1
+        name: 'kyle',                                                  //property 1
+        getHand: getHand                                                //property 2
+    },
+    iggy: {                                                             //object 2
+        name: 'iggy',                                                   //property 1
+        getHand: getHand                                                //property 2
+    },
 }
 
 
-function playRound() {
-    const deanoHand = players.deano.getHand();
-    const jackHand = players.jack.getHand();
-    console.log(`${players.deano.name} plays ${deanoHand}`);
-    console.log(`${players.jack.name} plays ${jackHand}`);                     
+function playRound(p1,p2) {
+    const deanoHand = p1.getHand();
+    const jackHand = p2.getHand();
+    console.log(`${p1.name} plays ${deanoHand}`);
+    console.log(`${p2.name} plays ${jackHand}`);                     
     
 
     if (deanoHand === jackHand) {                                       //returns draw if same hands are played
@@ -32,16 +40,16 @@ function playRound() {
         (deanoHand === 'scissors'&& jackHand === 'rock') 
         
     ) {
-        return 'Jack WINS!'
+        return p2
     }
     else {                                                              //returns deano wins if jack plays lesser hands
-        return 'Deano WINS!'
+        return p1
         }
 
 }
 
-const result = playRound();                                             //placed at the bottom as the variable can only be called after the function "playRound" is defined
-console.log(result);                                                    
+// const result = playRound();                                             //placed at the bottom as the variable can only be called after the function "playRound" is defined
+// console.log(result);                                                    
 
 function playGame(deano, jack, playUntil) {
     let deanoWins = 0;
@@ -54,26 +62,42 @@ function playGame(deano, jack, playUntil) {
         deanoWins++;
         }
     else if (victor === jack) {
-            jackWins++;
+        jackWins++;
         }
 
-        console.log(`Score ${players.deano.name} ${deanoWins} - ${players.jack.name} ${jackWins}`);
+        console.log(`Score ${deano.name} ${deanoWins} - ${jack.name} ${jackWins}`);
     }
 
 if (deanoWins === playUntil) {
-    console.log(`${players.deano.name} beats ${playesrs.jack.name}`)
-
+    console.log(`${deano.name} beats ${jack.name}`);
+    return deano;
 }
 else {
-    console.log(`${players.jack.name} beats ${playesrs.deano.name}`)
+    console.log(`${jack.name} beats ${deano.name}`);
+    return jack;
 }
 }
 
 const gameChamp = playGame(players.deano, players.jack, 3);
-console.log(`${winner} is the Champion!`);
-// function playTournament() {}
-//     deano 
-//     jack 
-//     playuntil
+console.log(`${gameChamp.name} is the Champion!`);
+
+const gameChamp2 = playGame(players.kyle, players.iggy, 3);
+console.log(`${gameChamp2.name} is the Champion!`);
+
+function playTournament(gameChamp, gameChamp2, playUntil) {
+    
+    let champion1 = playGame(p1, p2, playUntil);
+    console.log(`${champion1.name} Progresses to the final battle!`);
+
+    let champion2 = playGame(p3, p4, playUntil);
+    console.log(`${champion2.name} Progresses to the final battle!`);
+    
+    console.log("Final Round!");
+    let tournamentChampion = playGame(champion1, champion2, playUntil);
+    console.log(`Score ${tournamentChampion.name} is the world champion `);
+    }
+
+
+playTournament(players.deano, players.jack, players.kyle, players.iggy, 3);
 
 
