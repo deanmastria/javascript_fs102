@@ -43,3 +43,37 @@ function playRound() {
 const result = playRound();                                             //placed at the bottom as the variable can only be called after the function "playRound" is defined
 console.log(result);                                                    
 
+function playGame(deano, jack, playUntil) {
+    let deanoWins = 0;
+    let jackWins = 0; 
+
+    while (deanoWins < playUntil && jackWins < playUntil) {
+        const victor = playRound(deano, jack);
+
+    if (victor === deano) {
+        deanoWins++;
+        }
+    else if (victor === jack) {
+            jackWins++;
+        }
+
+        console.log(`Score ${players.deano.name} ${deanoWins} - ${players.jack.name} ${jackWins}`);
+    }
+
+if (deanoWins === playUntil) {
+    console.log(`${players.deano.name} beats ${playesrs.jack.name}`)
+
+}
+else {
+    console.log(`${players.jack.name} beats ${playesrs.deano.name}`)
+}
+}
+
+const gameChamp = playGame(players.deano, players.jack, 3);
+console.log(`${winner} is the Champion!`);
+// function playTournament() {}
+//     deano 
+//     jack 
+//     playuntil
+
+
