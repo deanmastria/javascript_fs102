@@ -84,7 +84,7 @@ console.log(`${gameChamp.name} is the Champion!`);
 const gameChamp2 = playGame(players.kyle, players.iggy, 3);
 console.log(`${gameChamp2.name} is the Champion!`);
 
-function playTournament(gameChamp, gameChamp2, playUntil) {
+function playTournament(p1, p2, p3, p4, playUntil) {
     
     let champion1 = playGame(p1, p2, playUntil);
     console.log(`${champion1.name} Progresses to the final battle!`);
